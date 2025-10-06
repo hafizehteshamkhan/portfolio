@@ -45,13 +45,15 @@ const Navbar = () => {
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-7">
             {NavbarLinks.map((link) => {
+              return(
               <a
                 key={link.id}
                 href={link.link}
                 className="hover:text-gray-200 text-lg"
               >
                 {link.name}
-              </a>;
+              </a>
+              );
             })}
             <button className="inline-flex text-white border-2 py-2 px-6 focus:outline-none hover:bg-purple-800 rounded-full text-lg">
               Contact
@@ -73,6 +75,7 @@ const Navbar = () => {
           </button>
           {/* mobile navigation */}
           {NavbarLinks.map((link) => {
+            return( 
             <a
               key={link.id}
               href={link.link}
@@ -80,8 +83,9 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               {link.name}
-            </a>;
-          })}'
+            </a>
+            )
+          })}
           {/* contact-button */}
           <button className="inline-flex text-white border-2 py-2 px-6 focus:outline-none hover:bg-purple-800 rounded-full text-lg"></button>
         </div>
