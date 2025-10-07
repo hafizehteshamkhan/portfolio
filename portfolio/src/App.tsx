@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Hero from './components/hero'
+import About from './components/About'
+import Skills from './components/skills'
 const App = () => {
 
   useEffect(()=>{
@@ -12,8 +14,9 @@ const App = () => {
   return (
     <>
     <div>
-      <p className='mt-[50px] text-center'>Hello ts</p>
       <Hero/>
+      <About/>
+      <Skills/>
     </div>
     </>
   )
